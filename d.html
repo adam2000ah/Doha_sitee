@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour ma princesse Doha 💖</title>
+
+<link rel="stylesheet" href="d.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>💖 Hbibti Doha zwena kanbgheek bzaf 💖</h1>
+    <p>عيد مبارك سعيد، ادخله الله عليكِ حبيبتي بالصحة والسلامة 🤍✨</p>
+    <p>Rak gha nti li 3endiii ❤️</p>
+</div>
+
+<!-- 🎁 Gift -->
+<div class="gift-box" onclick="openGift()">
+    <div class="gift">🎁</div>
+    <p>Klik hna ❤️</p>
+</div>
+
+<!-- 🎉 Surprise -->
+<div id="surprise" class="hidden">
+    <img src="c:\Users\espacegamers\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\F6E4217FDB7A684FDF5968AB0473C71D10D4FD5A\transfers\2026-12\WhatsApp Image 2026-03-19 at 15.00.56.jpeg" alt="nous">
+    <h2>💖 Hbiba dyali 💖</h2>
+    <p>Ntia ahsan haja f hyati 😍</p>
+</div>
+
+<!-- 🎶 Music -->
+<audio id="music" src="c:\Users\espacegamers\Downloads\Aminux - Ana Wiak (Official Audio)  أمينوكس - أنا وياك.mp3"></audio>
+
+<!-- ❤️ Hearts Script -->
+<script>
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * window.innerWidth + 'px';
+    heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+setInterval(createHeart, 300);
+
+// 🎁 Open Gift
+function openGift() {
+    let surprise = document.getElementById("surprise");
+    let music = document.getElementById("music");
+
+    surprise.classList.remove("hidden");
+
+    setTimeout(() => {
+        surprise.classList.add("show");
+    }, 100);
+
+    music.play();
+}
+</script>
+
+</body>
+</html>
