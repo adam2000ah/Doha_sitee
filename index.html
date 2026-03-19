@@ -30,8 +30,17 @@
 </div>
 
 <!-- 🎶 Music -->
-<button onclick="document.getElementById('music').play()">Play Music</button>
-<audio id="music" src="music.mp3"></audio>
+<button id="playBtn">Play Music</button>
+<audio id="music" src="Aminux - Ana Wiak (Official Audio).mp3"></audio>
+
+<script>
+  const btn = document.getElementById('playBtn');
+  const music = document.getElementById('music');
+
+  btn.addEventListener('click', () => {
+    music.play();
+  });
+</script>
 
 <!-- ❤️ Hearts Script -->
 <script>
